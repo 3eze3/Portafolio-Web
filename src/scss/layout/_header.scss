@@ -1,0 +1,66 @@
+@use '../abstract/mixins/mix-animations' as mx-an;
+@use '../abstract/mixins/mix-layout' as mx-lt;
+@use '../abstract/variables' as v;
+.header {
+	width: 100%;
+	height: fit-content;
+	padding-block: v.$space-1-3rem;
+	@include mx-lt.flex($direction: row, $gap: v.$space-3-5rem);
+	@include mx-lt.mobile(v.$mobile) {
+		gap: v.$space-2rem;
+		@include mx-lt.position-header(fixed, $top: calc(100dvh - 65.21px));
+	}
+	@include mx-lt.position-header();
+	@include mx-an.scroll-animation-blur-header();
+
+	&__actions {
+		@include mx-lt.flex($direction: row, $gap: v.$space-1-3rem);
+		@include mx-lt.mobile(v.$mobile) {
+			gap: 0.5rem;
+		}
+	}
+
+	&__icon {
+		width: 1.68rem;
+		@include mx-lt.mobile(v.$tablet-regular) {
+			width: 1.8rem;
+		}
+
+		@include mx-lt.mobile(v.$mobile) {
+			width: 1.35rem;
+		}
+	}
+
+	&__language {
+		cursor: pointer;
+		color: v.$soft-white;
+
+		@include mx-lt.mobile(v.$tablet) {
+			font-size: 1.25rem;
+		}
+
+		@include mx-lt.mobile(v.$tablet-regular) {
+			font-size: 1.15rem;
+		}
+
+		@include mx-lt.mobile(v.$tablet-regular) {
+			font-size: 1rem;
+		}
+
+		&-option {
+			font-size: 1.5rem;
+
+			@include mx-lt.mobile(v.$tablet) {
+				font-size: 1.25rem;
+			}
+
+			@include mx-lt.mobile(v.$tablet-regular) {
+				font-size: 1.15rem;
+			}
+
+			@include mx-lt.mobile(v.$mobile) {
+				font-size: 1rem;
+			}
+		}
+	}
+}

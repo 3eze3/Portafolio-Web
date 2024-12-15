@@ -1,0 +1,71 @@
+@use '../abstract/mixins/mix-layout' as mx-lt;
+@use '../abstract/mixins/mix-animations' as mx-an;
+@use '../abstract/variables' as v;
+.hero {
+	width: 100%;
+	height: 100%;
+	@include mx-lt.flex($gap: 0);
+	&__container {
+		width: 55rem;
+		padding-inline: 1rem;
+		z-index: 10;
+		@include mx-lt.flex($justify: center, $gap: v.$space-5rem);
+
+		@include mx-lt.mobile(v.$destopk) {
+			gap: 3rem;
+		}
+
+		@include mx-lt.mobile(v.$tablet) {
+			width: 100%;
+			gap: 4rem;
+		}
+
+		@include mx-lt.mobile(v.$tablet-regular) {
+			gap: 4.75rem;
+		}
+
+		@include mx-lt.mobile(v.$mobile) {
+			padding-inline: 0;
+			gap: 3.8rem;
+		}
+	}
+
+	&__information {
+		@include mx-lt.flex($gap: 1.5rem);
+	}
+
+	&__name {
+		@include mx-lt.mobile(v.$tablet-regular) {
+			font-size: 3.5em;
+		}
+
+		@include mx-lt.mobile(v.$mobile) {
+			font-size: 2.9em;
+		}
+	}
+
+	&__profesion {
+		font-size: v.$subtitle-header;
+		color: v.$soft-cyan;
+		&--youtube {
+			color: v.$cyan;
+		}
+		@include mx-lt.mobile(v.$tablet-regular) {
+			font-size: 2.25em;
+		}
+		@include mx-lt.mobile(v.$mobile) {
+			font-size: 1.95em;
+		}
+	}
+
+	&__video {
+		position: absolute;
+		object-position: center;
+		top: 0;
+		left: 0;
+		filter: brightness(50%) drop-shadow(1rem 1rem 2rem #082c46);
+		@include mx-lt.mobile(v.$mobile) {
+			@include mx-an.slide-hero-video();
+		}
+	}
+}

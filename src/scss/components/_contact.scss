@@ -1,0 +1,94 @@
+@use '../abstract/mixins/mix-layout' as mx-lt;
+@use '../abstract/mixins/mix-utils' as mx-ut;
+@use '../abstract/variables' as v;
+.contact {
+	width: 100%;
+
+	@include mx-lt.flex($direction: row);
+
+	@include mx-lt.mobile(v.$mobile) {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	@include mx-lt.mobile(v.$tablet-regular) {
+		width: fit-content;
+	}
+
+	&__icon {
+		width: 1.75rem;
+
+		@include mx-lt.mobile(v.$tablet) {
+			width: 1.4rem;
+		}
+
+		@include mx-lt.mobile(v.$tablet-regular) {
+			width: 1.25rem;
+		}
+	}
+
+	&__link {
+		color: v.$soft-white;
+		transition: color 0.2s ease, transform 0.2s ease;
+		padding: 0.4rem v.$space-1rem;
+		//
+		@include mx-ut.round(0.7rem);
+		@include mx-lt.flex($direction: row, $gap: 0.5rem);
+
+		@include mx-lt.mobile(v.$tablet) {
+			padding: 0.25rem v.$space-1rem;
+		}
+
+		@include mx-lt.mobile(v.$tablet-regular) {
+			padding: 0.25rem 0.5rem;
+		}
+
+		&:hover {
+			transform: translateY(-0.2rem);
+			box-shadow: v.$shadow-dark-transparent;
+		}
+
+		&--linkedin {
+			&:hover {
+				color: v.$celest;
+			}
+			@include mx-lt.mobile(v.$tablet) {
+				color: v.$celest;
+			}
+		}
+
+		&--youtube {
+			@include mx-lt.mobile(v.$tablet) {
+				color: v.$soft-red;
+			}
+			&:hover {
+				color: v.$soft-red;
+			}
+		}
+
+		&--email {
+			@include mx-lt.mobile(v.$tablet) {
+				color: v.$white;
+			}
+
+			&:hover {
+				color: v.$white;
+				transform: translateY(0);
+				cursor:auto ;
+			}
+		}
+
+		@include mx-lt.mobile(v.$tablet) {
+			transition: none;
+			box-shadow: v.$shadow-dark-transparent;
+			&:hover {
+				transform: none;
+				box-shadow: none;
+			}
+		}
+	}
+
+	&__social {
+		font-family: v.$font-family-poppins-semibold;
+	}
+}

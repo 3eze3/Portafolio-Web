@@ -1,0 +1,117 @@
+// --------------------------- Family Fonts ---------------------------
+@font-face {
+	font-family: 'Poppins light';
+	font-weight: 300;
+	src: local('Poppins normal'),
+		url('../assest/fonts/webfonts/poppins-latin-300-normal.woff2')
+			format('woff2'),
+		url('../assest/fonts/webfonts/poppins-latin-300-normal.woff') format('woff'),
+		url('../assest/fonts/ttf/poppins-latin-300-normal.ttf') format('ttf');
+}
+@font-face {
+	font-family: 'Poppins Regular';
+	font-weight: 400;
+	src: local('Poppins normal'),
+		url('../assest/fonts/webfonts/poppins-latin-400-normal.woff2')
+			format('woff2'),
+		url('../assest/fonts/webfonts/poppins-latin-400-normal.woff') format('woff'),
+		url('../assest/fonts/ttf/poppins-latin-400-normal.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: 'Poppins Semibold';
+	font-weight: 600;
+	src: local('Poppins normal'),
+		url('../assest/fonts/webfonts/poppins-latin-600-normal.woff2')
+			format('woff2'),
+		url('../assest/fonts/webfonts/poppins-latin-600-normal.woff') format('woff'),
+		url('../assest/fonts/ttf/poppins-latin-600-normal.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: 'Poppins Bold';
+	font-weight: 700;
+	src: local('Poppins normal'),
+		url('../assest/fonts/webfonts/poppins-latin-700-normal.woff2')
+			format('woff2'),
+		url('../assest/fonts/webfonts/poppins-latin-700-normal.woff') format('woff'),
+		url('../assest/fonts/ttf/poppins-latin-700-normal.ttf') format('ttf');
+}
+
+$font-family-poppins-light: 'Poppins light';
+$font-family-poppins-regular: 'Poppins Regular';
+$font-family-poppins-semibold: 'Poppins Semibold';
+$font-family-poppins-bold: 'Poppins Bold';
+// --------------------------- Size Fonts -----------------------------
+$header: 4.5em;
+$subtitle: 3.5em;
+$subtitle-header: 2.75em;
+$link_nav: 1.5em;
+$projects_subtitle: 1.3em;
+$link_filter: 1.14em;
+$parragrahp: 1em;
+// --------------------------- Colors ---------------------------------
+$white: #edf2ff;
+$gray: #b8c5e4;
+$cream: #b4adad;
+$cyan: #31baff;
+$pink: #dd2f7f;
+$celest: #2bb0c8;
+$soft-white: #c7d6ff;
+$soft-gray: #c5c8cfcf;
+$soft-blue: #bfdbff;
+$soft-cyan: #b2d3ff;
+$soft-cyan-transparent: #92c1ff0d;
+$soft-green: #55a078;
+$smoth-white: #bfd3ef;
+$soft-blue-gray: #425167;
+$soft-red: #d41919;
+$light-blue: #0c3d60;
+$light-green: #00fb3a;
+$light-cyan: #559fa0;
+$light-celest: #79ccf5;
+$light-purple: #8ea3ff;
+$light-lavanda: #748fb8;
+$bg-black: #0a0a0a;
+$bg-soft-cyan: #18506c;
+$bg-dark-cyan: #0b2330;
+$bg-dark-blue: #0b1a229f;
+$bg-soft-blue-dark: #133a50;
+$shadow-cream: #5050507c;
+$shadow-dark: #000000cf;
+$dark-blue: #000406;
+$dark-brow: #242424;
+
+$blur-higcontrast: blur(0px) grayscale(0) contrast(1.2);
+$invert-light: invert(0.6) brightness(100%);
+
+$drop-shadow-dark-transparent: drop-shadow(1rem 1rem 1.5rem #102738c2);
+$drop-shadow-blue: drop-shadow(0.2rem 0.2rem 0.4rem #10273878);
+$shadow-dark-gray-transparent: 0rem 0.1rem 0.4rem rgba(88, 88, 88, 0.177);
+$shadow-dark-blue-transparent: 0.1rem 0.9rem 0.3rem #050b0e9f;
+$shadow-dark-transparent: 0.1rem 0.1rem 0.5rem #102738a3;
+$shadow-transparent: 0rem 0.2rem 0.3rem rgba(0, 0, 0, 0.321);
+$shadow-dark-red: 0.1rem 0.1rem 0.2rem #d618187e, -0.1rem -0.1rem 0.2rem #000;
+$shadow-dark-gray: 0.1rem 0.1rem 0.2rem #edf1fc79, -0.1rem -0.1rem 0.2rem #000;
+$shadow-dark-green: 0.1rem 0.1rem 0.2rem #303030a8, -0.1rem -0.1rem 0.2rem #000;
+$shadow-ligth: 0.1rem 0.3rem 0.2rem #171717a6, 0.3rem 0.1rem 0.4rem #17171752;
+
+$space-1rem: 1rem;
+$space-1-3rem: 1.3rem;
+$space-2rem: 2rem;
+$space-2-5rem: 2.5rem;
+$space-3rem: 3rem;
+$space-3-5rem: 3.5rem;
+$space-5rem: 5rem;
+$space-6rem: 6rem;
+
+$min-grid: 25rem;
+$avatar-size-20rem: 20rem;
+$contact-icon-size-1-5rem: 2.5rem;
+$icon-size-2-5rem: 2.5rem;
+
+$destopk: 1025px;
+$tablet: 940px;
+$tablet-regular: 768px;
+$mobile: 557px;
+$small-mobile: 400px;

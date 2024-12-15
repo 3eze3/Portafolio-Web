@@ -1,0 +1,67 @@
+@use '../abstract/mixins/mix-layout' as mx-lt;
+@use '../abstract/mixins/mix-utils' as mx-ut;
+@use '../abstract/mixins/mix-animations' as mx-an;
+@use '../abstract/variables' as v;
+.skills {
+	width: 100%;
+	padding-block: 0.5rem;
+	white-space: nowrap;
+	overflow: hidden;
+	position: relative;
+	@include mx-ut.round(v.$space-1rem);
+
+	&::after,
+	&::before {
+		content: '';
+		top: 0;
+		width: 4rem;
+		height: 100%;
+		display: block;
+		position: absolute;
+		z-index: 2;
+		@include mx-ut.round(v.$space-1rem);
+	}
+
+	&::after {
+		left: 0;
+		@include mx-ut.bg-linear-radient(
+			right,
+			v.$soft-cyan-transparent,
+			10%,
+			transparent,
+			100%
+		);
+	}
+
+	&::before {
+		left: calc(100% - 4rem);
+		@include mx-ut.bg-linear-radient(
+			right,
+			transparent,
+			10%,
+			v.$soft-cyan-transparent,
+			100%
+		);
+	}
+
+	&__slide {
+		width: 69rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: v.$space-1rem;
+		@include mx-an.infinite-slide();
+	}
+
+	&__icon {
+		width: v.$space-6rem;
+		padding-inline: v.$space-1rem;
+		filter: v.$drop-shadow-dark-transparent;
+		@include mx-lt.mobile(v.$destopk) {
+			width: 5rem;
+		}
+		@include mx-lt.mobile(v.$mobile) {
+			width: 4.2rem;
+		}
+	}
+}

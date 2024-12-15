@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content=" Desarrollador frontend enfocado en crear aplicaciones web con una experiencia de usuario excepcional y un diseño limpio. Comparto mi proceso de desarrollo y herramientas en mi canal de YouTube y directos en Kick " />
+		<meta
+			name="keywords"
+			content="Portfolio, frontend , youtube, creador de contenido , desarrollador frontend" />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Canonical Tag -->
+		<link rel="canonical" href="https://ezecoder.com" />
+		<meta name="author" content="Ezequiel Cordova" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<!-- Open Graph (para compartir en redes sociales) -->
+		<meta
+			property="og:title"
+			content="Portfolio - ezecoder by Ezequiel Cordova" />
+		<meta
+			property="og:description"
+			content="Explora mis proyectos de desarrollo frontend, incluyendo HTML, CSS, JavaScript y más." />
+		<meta
+			property="og:image"
+			content="https://i.postimg.cc/Xvwt2v9n/portada-web.png" />
+		<meta property="og:url" content="https://ezecoder.com" />
+		<meta property="og:type" content="website" />
+
+		<!-- Twitter Cards (para compartir en Twitter) -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta
+			name="twitter:title"
+			content="Portfolio - ezecoder by Ezequiel Cordova" />
+		<meta
+			name="twitter:description"
+			content="Conoce mi trabajo como desarrollador frontend, incluyendo proyectos con HTML, CSS y JavaScript." />
+		<meta
+			name="twitter:image"
+			content="https://i.postimg.cc/Xvwt2v9n/portada-web.png" />
+
+		<!-- LinkedIn también usa Open Graph -->
+		<!-- Las etiquetas Open Graph ya están configuradas para LinkedIn -->
+
+		<!-- Meta Schema.org (datos estructurados) -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Ezequiel Cordova",
+				"url": "https://tusitio.com",
+				"sameAs": [
+					"https://www.youtube.com/@eze-coder",
+					"https://www.linkedin.com/in/ezequielcordova/",
+					"https://instagram.com/ezecoder"
+				]
+			}
+		</script>
+
+		<!-- Favicon y otros iconos -->
+		<link
+			rel="apple-touch-icon"
+			sizes="57x57"
+			href="./assest/images/favicon/apple-icon-57x57.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="60x60"
+			href="./assest/images/favicon/apple-icon-60x60.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="72x72"
+			href="./assest/images/favicon/apple-icon-72x72.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="76x76"
+			href="./assest/images/favicon/apple-icon-76x76.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="114x114"
+			href="./assest/images/favicon/apple-icon-114x114.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="120x120"
+			href="./assest/images/favicon/apple-icon-120x120.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="./assest/images/favicon/apple-icon-144x144.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="./assest/images/favicon/apple-icon-152x152.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./assest/images/favicon/apple-icon-180x180.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="./assest/images/favicon/android-icon-192x192.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assest/images/favicon/favicon-32x32.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="96x96"
+			href="./assest/images/favicon/favicon-96x96.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./assest/images/favicon/favicon-16x16.png" />
+
+		<script type="module" src="./js/main.js" defer></script>
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<title>Portfolio - ezecoder by Ezequiel Cordova</title>
+	</head>
+
+	<body>
+		<section class="presentation">
+			<header class="presentation__header header">
+				<nav class="header__nav nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a
+								class="nav__link"
+								href="#proyectos"
+								data-section="presentation"
+								data-value="projects-link">
+							</a>
+						</li>
+						<li class="nav__item">
+							<a
+								class="nav__link"
+								href="#hola"
+								data-section="presentation"
+								data-value="hi-link">
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="header__actions">
+					<a
+						class="header__link"
+						target="_blank"
+						href="https://youtube.com/@eze-coder">
+						<img
+							loading="lazy"
+							class="header__icon"
+							src="./assest/images/icons/Social/youtube.svg"
+							alt="Icono de mi canal de youtube" />
+					</a>
+					<select
+						class="header__language"
+						aria-label="Cambiar idioma de visualización">
+						<option class="header__language-option" value="es-la">
+							Español
+						</option>
+						<option class="header__language-option" value="en">English</option>
+					</select>
+				</div>
+			</header>
+			<div class="presentation__hero hero">
+				<video class="hero__video" autoplay muted loop>
+					<source src="./assest/videos/Hero.mp4" type="video/mp4" />
+					Your browser does not support the video tag.
+				</video>
+
+				<div class="hero__container">
+					<section class="hero__information">
+						<h1
+							class="hero__name"
+							data-section="presentation"
+							data-value="name"></h1>
+						<h2
+							class="hero__profesion"
+							data-section="presentation"
+							data-value="role"
+							aria-label="Frontend Developer y Creador de contenido">
+							<span class="hero__profession hero__profesion--youtube"> </span>
+						</h2>
+					</section>
+
+					<ul class="hero__contact contact">
+						<li class="contact__item">
+							<a
+								class="contact__link contact__link--linkedin"
+								target="_blank"
+								href="https://linkedin.com/in/ezequielcordova">
+								<img
+									loading="lazy"
+									class="contact__icon"
+									src="./assest/images/icons/Social/linkedin.svg"
+									alt="Enlace al perfil de linkedin" />
+								<span class="contact__social">Linkedin</span>
+							</a>
+						</li>
+						<li class="contact__item">
+							<a
+								class="contact__link contact__link--youtube"
+								target="_blank"
+								href="https://www.youtube.com/@eze-coder">
+								<img
+									loading="lazy"
+									class="contact__icon"
+									src="./assest/images/icons/Social/youtube.svg"
+									alt="Enlace al canal de youtube" />
+								<span class="contact__social">Youtube</span>
+							</a>
+						</li>
+						<li class="contact__item contact__item--email">
+							<div class="contact__link contact__link--email">
+								<img
+									class="contact__icon"
+									loading="lazy"
+									src="./assest/images/icons/Social/email.png"
+									alt="correo electronico ezekics33@gmail.com " />
+								<span class="contact__social contact__social--email">
+									ezekics33@gmail.com
+								</span>
+							</div>
+						</li>
+					</ul>
+					<div class="hero__skills skills">
+						<div class="skills__slide">
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/Html.png"
+								alt=" Icono de Tecnologia Html" />
+
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/css.png"
+								alt=" Icono de Tecnologia CSS" />
+
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/js.png"
+								alt=" Icono de Tecnologia JS" />
+
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/nodejs.png"
+								alt=" Icono de Tecnologia Node js" />
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/react.png"
+								alt=" Icono de Tecnologia REACT JS" />
+
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/TS.png"
+								alt=" Icono de Tecnologia TS" />
+
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/sass.png"
+								alt=" Icono de Tecnologia SCSS" />
+
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/git.png"
+								alt=" Icono de Tecnologia GIT" />
+
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/bash.png"
+								alt=" Icono de Tecnologia BASH" />
+
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/linux.png"
+								alt=" Icono de Tecnologia LINUX" />
+						</div>
+						<div class="skills__slide">
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/Html.png"
+								alt=" Icono de Tecnologia Html" />
+
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/css.png"
+								alt=" Icono de Tecnologia CSS" />
+
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/js.png"
+								alt=" Icono de Tecnologia JS" />
+
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/nodejs.png"
+								alt=" Icono de Tecnologia Node js" />
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/react.png"
+								alt=" Icono de Tecnologia REACT JS" />
+
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/TS.png"
+								alt=" Icono de Tecnologia TS" />
+
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/sass.png"
+								alt=" Icono de Tecnologia SCSS" />
+
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/git.png"
+								alt=" Icono de Tecnologia GIT" />
+
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/bash.png"
+								alt=" Icono de Tecnologia BASH" />
+
+							<img
+								loading="lazy"
+								class="skills__icon"
+								src="./assest/images/icons/Tech/linux.png"
+								alt=" Icono de Tecnologia LINUX" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<main class="projects" id="proyectos">
+			<h2 class="projects__title" data-section="projects" data-value="title">
+				Projectos
+			</h2>
+			<div class="projects__box">
+				<section class="projects__wrapper">
+					<form class="projects__filter filter">
+						<div class="filter__wrapper">
+							<input
+								class="filter__technology-input"
+								type="checkbox"
+								id="all"
+								value="all" />
+							<label class="filter__label" for="all">All</label>
+						</div>
+						<div class="filter__wrapper">
+							<input
+								class="filter__technology-input"
+								type="checkbox"
+								value="html"
+								id="html" />
+							<label class="filter__label" for="html">HTML</label>
+						</div>
+						<div class="filter__wrapper">
+							<input
+								class="filter__technology-input"
+								type="checkbox"
+								value="css"
+								id="css" />
+							<label class="filter__label" for="css">CSS</label>
+						</div>
+						<div class="filter__wrapper">
+							<input
+								class="filter__technology-input"
+								type="checkbox"
+								value="scss"
+								id="scss" />
+							<label class="filter__label" for="scss">SCSS</label>
+						</div>
+						<div class="filter__wrapper">
+							<input
+								class="filter__technology-input"
+								type="checkbox"
+								value="js"
+								id="js" />
+							<label class="filter__label" for="js">Js</label>
+						</div>
+						<div class="filter__wrapper">
+							<input
+								class="filter__technology-input"
+								type="checkbox"
+								value="ts"
+								id="ts" />
+							<label class="filter__label" for="ts">TS</label>
+						</div>
+						<div class="filter__wrapper">
+							<input
+								class="filter__technology-input"
+								type="checkbox"
+								value="nodejs"
+								id="node" />
+							<label class="filter__label" for="node">Node</label>
+						</div>
+						<div class="filter__wrapper">
+							<input
+								class="filter__technology-input"
+								type="checkbox"
+								value="react"
+								id="react" />
+							<label class="filter__label" for="react"> React </label>
+						</div>
+					</form>
+					<section class="projects__container-proyects"></section>
+				</section>
+
+				<section class="projects__live live">
+					<div class="live__wrapper">
+						<button class="live__btn live__btn-prev" aria-label="previus tools">
+							<img
+								loading="lazy"
+								class="live__arrow live__arrow-left"
+								src="./assest/images/icons/general/left_arrow_icon.svg"
+								alt="Left arrow for the next projecto" />
+						</button>
+
+						<section class="live__container">
+							<article class="live__card card">
+								<a
+									class="card__page-link"
+									target="_blank"
+									href="https://www.youtube.com/watch?v=G97g2YpyZAg">
+									<img
+										loading="lazy"
+										class="card__img live__img"
+										src="./assest/images/ilustration/about/scriptnodejs.png"
+										alt="Ilustracion del projecto" />
+								</a>
+								<section class="card__content">
+									<h3 class="card__title">Script Node JS</h3>
+									<div class="card__box">
+										<a
+											aria-label="Video de Youtube del desarrollo del projecto"
+											class="card__link card__link--youtube"
+											target="_blank"
+											href="https://www.youtube.com/watch?v=G97g2YpyZAg">
+											YT video
+										</a>
+										<a
+											class="card__link card__link--github"
+											target="_blank"
+											href="https://github.com/3eze3/scripting-structure-work">
+											Github
+										</a>
+									</div>
+								</section>
+							</article>
+
+							<article class="live__card card">
+								<a
+									class="card__page-link"
+									target="_blank"
+									href="https://www.youtube.com/watch?v=G97g2YpyZAg">
+									<img
+										loading="lazy"
+										class="card__img live__img"
+										src="./assest/images/ilustration/about/scriptnodejs.png"
+										alt="Ilustracion del projecto" />
+								</a>
+								<section class="card__content">
+									<h3 class="card__title">Script node js</h3>
+									<div class="card__box">
+										<a
+											aria-label="Video de Youtube del desarrollo del projecto"
+											class="card__link card__link--youtube"
+											target="_blank"
+											href="https://www.youtube.com/watch?v=G97g2YpyZAg">
+											YT video
+										</a>
+										<a
+											class="card__link card__link--github"
+											target="_blank"
+											href="https://github.com/3eze3/scripting-structure-work">
+											Github
+										</a>
+									</div>
+								</section>
+							</article>
+						</section>
+						<button
+							class="live__btn live__btn-next"
+							aria-label="Right arrow for the next projecto">
+							<img
+								loading="lazy"
+								class="live__arrow live__arrow-left"
+								src="./assest/images/icons/general/right_arrow_icon.svg"
+								alt="Right arrow for the next projecto" />
+						</button>
+					</div>
+					<a
+						href="https://kick.com/EzequielTech"
+						class="live__link"
+						target="_blank"
+						aria-label="Enlace a mi canal de kick">
+						Realizado en
+						<img
+							loading="lazy"
+							class="live__icon"
+							src="./assest/images/icons/Social/Kick-Logo.png"
+							alt="Icono de mi canal de KICK" />
+					</a>
+				</section>
+			</div>
+		</main>
+
+		<section class="about" id="hola">
+			<h2
+				class="about__greeting"
+				aria-label="Hola"
+				data-section="about"
+				data-value="greeting"></h2>
+			<section class="about__content">
+				<!--  -->
+				<div class="about__information">
+					<p
+						class="about__description"
+						data-section="about"
+						data-value="description">
+						<a
+							class="about__description about__description--youtube"
+							target="_blank"
+							href="https://youtube.com/@eze-coder"></a>
+						<a
+							class="about__description about__description--kick"
+							target="_blank"
+							href="https://kick.com/EzequielTech">
+						</a>
+					</p>
+					<p
+						class="about__description about__description--goal"
+						data-section="about"
+						data-value="goal"></p>
+				</div>
+				<div class="about__wrapper">
+					<div class="about__avatar">
+						<img
+							loading="lazy"
+							class="about__img"
+							src="./assest/images/ilustration/about/ezequielcordova.jpg "
+							alt="Ezequiel Cordova:(aka ezecoder)" />
+					</div>
+					<div class="about__social">
+						<a
+							class="about__link about__link--instagram"
+							target="_blank"
+							href="https://instagram.com/ezecoder">
+							Instagram
+						</a>
+						<a
+							class="about__link about__link--youtube"
+							target="_blank"
+							href="https://youtube.com/@eze-coder">
+							Youtube
+						</a>
+
+						<a
+							class="about__link about__link--kick"
+							target="_blank"
+							href="https://kick.com/EzequielTech">
+							KICK
+						</a>
+					</div>
+				</div>
+			</section>
+		</section>
+		<footer class="footer">
+			<div class="footer__wrapper">
+				<h2 class="footer__name">Ezequiel Cordova</h2>
+				<nav class="footer__container">
+					<a
+						class="footer__link"
+						href="https://www.linkedin.com/in/ezequielcordova">
+						<img
+							loading="lazy"
+							class="footer__icon"
+							src="./assest/images/icons/Social/linkedin.svg"
+							alt="Icono de linkedin" />
+					</a>
+					<a class="footer__link" href="https://www.instagram.com/ezecoder/">
+						<img
+							loading="lazy"
+							class="footer__icon"
+							src="./assest/images/icons/Social/instagram.svg"
+							alt="Icono de instagram" />
+					</a>
+				</nav>
+			</div>
+		</footer>
+
+		<section class="modalEmail">
+			<p
+				class="modalEmail__alert"
+				data-section="modal"
+				data-value="description">
+				Copiado en el ClipBoard!
+			</p>
+		</section>
+	</body>
+</html>

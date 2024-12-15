@@ -1,0 +1,28 @@
+{
+	"presentation": {
+		"projects-link": "Projects",
+		"hi-link": "Hello",
+		"notes-link": "Notes",
+		"name": "Hi, I'm Ezequiel",
+		"role": "Frontend Developer y <span class='hero__profession hero__profesion--youtube'> Content Creador</span> "
+	},
+
+	"projects": {
+		"title": "Projects"
+	},
+
+	"about": {
+		"greeting": "HELLOOOOOOO!",
+		"description": "Frontend developer focused on creating web applications with an exceptional user experience and clean design. I share my development process and tools on my channel on <a class='about__description about__description--youtube' target='_blank' href='https://youtube.com/@eze-coder'> YouTube </a> and live streams on <a class='about__description about__description--kick' target='_blank' href='https://kick.com/EzequielTech'> Kick </a>",
+		"goal": "My goal is to continue to grow professionally and to bring innovation and quality to teams that value these principles."
+	},
+
+	"notes": {
+		"title": "Notes",
+		"description": "Explore how these ideas were born and the challenges overcome during their development. Each project tells a unique story, from the first sketches to the final solutions. <span class='notes__description notes__description--blogs'>Click any title to learn more details.</span>"
+	},
+
+	"modal": {
+		"description": "Copied to Clipboard!"
+	}
+}

@@ -1,0 +1,66 @@
+@use '../abstract/variables' as v;
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	vertical-align: baseline;
+}
+*::before,
+*::after {
+	display: block;
+}
+
+img,
+video,
+picture {
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	object-position: center;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+	font-size: inherit;
+}
+
+p a {
+	display: inline;
+}
+
+li {
+	list-style-type: none;
+}
+
+html {
+	scroll-behavior: smooth;
+	scrollbar-color: v.$light-blue v.$dark-blue;
+	scrollbar-width: thin;
+}
+
+svg {
+	width: 100%;
+	display: block;
+	fill: currentColor;
+}
+form,
+input,
+textarea,
+select,
+button,
+label {
+	font-family: inherit;
+	font-size: inherit;
+	hyphens: auto;
+	background-color: transparent;
+	color: inherit;
+	display: block;
+	appearance: none;
+}

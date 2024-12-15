@@ -1,0 +1,58 @@
+@use '../abstract/mixins/mix-layout' as mx-lt;
+@use '../abstract/mixins/mix-utils' as mx-ut;
+@use '../abstract/variables' as v;
+.projects {
+	width: 100%;
+	min-height: 100dvh;
+	padding: v.$space-2rem v.$space-3rem;
+	@include mx-ut.bg-linear-radient(bottom, #041623, 45%, #000406, 100%);
+	@include mx-lt.flex($justify: flex-start, $gap: v.$space-3rem);
+
+	@include mx-lt.mobile(v.$tablet) {
+		padding-inline: v.$space-1rem;
+	}
+
+	@include mx-lt.mobile(v.$mobile) {
+		padding-inline: 1.5rem;
+	}
+
+	&__box {
+		width: 100%;
+
+		@include mx-lt.flex(
+			$direction: row,
+			$justify: space-between,
+			$gap: v.$space-3rem
+		);
+
+		@include mx-lt.mobile(v.$destopk) {
+			flex-direction: column;
+			gap: v.$space-3rem;
+			@include mx-lt.flex(v.$space-3rem);
+		}
+	}
+
+	&__wrapper {
+		width: 65%;
+		min-height: 100dvh;
+		@include mx-lt.flex($justify: flex-start, $gap: v.$space-3rem);
+		@include mx-lt.mobile(v.$destopk) {
+			width: 100%;
+			@include mx-lt.flex($justify: flex-start, $gap: v.$space-3rem);
+		}
+	}
+
+	&__container-proyects {
+		@include mx-lt.grid-responsive();
+		@include mx-lt.mobile(v.$tablet) {
+			@include mx-lt.grid-responsive(v.$min-grid);
+		}
+		@include mx-lt.mobile(v.$mobile) {
+			@include mx-lt.grid-responsive(23rem);
+		}
+
+		@include mx-lt.mobile(v.$small-mobile) {
+			@include mx-lt.grid-responsive(19rem);
+		}
+	}
+}

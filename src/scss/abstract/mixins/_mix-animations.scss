@@ -1,0 +1,72 @@
+@mixin slide-hero-video() {
+	& {
+		animation: view-hero infinite 27s linear;
+		@keyframes view-hero {
+			0% {
+				object-position: center center;
+			}
+
+			33% {
+				object-position: left center;
+			}
+
+			67% {
+				object-position: -35rem center;
+			}
+
+			100% {
+				object-position: center center;
+			}
+		}
+	}
+}
+
+@mixin reveal-up-cards($scale: 0.5, $start: 15%, $end: 25%) {
+	& {
+		animation: reveal linear both;
+		animation-timeline: view();
+		animation-range: entry $start cover $end;
+		@keyframes reveal {
+			from {
+				opacity: 0;
+				translate: 0 150px;
+				scale: $scale;
+			}
+
+			to {
+				opacity: 1;
+				translate: 0 0;
+				scale: 1;
+			}
+		}
+	}
+}
+
+@mixin infinite-slide($time: 17s) {
+	& {
+		animation: slide $time infinite linear;
+		@keyframes slide {
+			0% {
+				transform: translateX(0);
+			}
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+	}
+}
+
+@mixin scroll-animation-blur-header($range-x: 0px, $range-y: 40px) {
+	& {
+		animation: blur-header linear both;
+		animation-timeline: scroll(root block);
+		animation-range: 0 $range-y;
+
+		@keyframes blur-header {
+			to {
+				background-color: rgba(40, 47, 61, 0.511);
+				backdrop-filter: blur(5px);
+			}
+		}
+	}
+}

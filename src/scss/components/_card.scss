@@ -1,0 +1,180 @@
+@use '../abstract/mixins/mix-layout' as mx-lt;
+@use '../abstract/mixins/mix-animations' as mx-an;
+@use '../abstract/mixins/mix-utils' as mx-ut;
+@use '../abstract/variables' as v;
+.card {
+	transform-style: preserve-3d;
+	perspective: 100rem;
+	transition: transform 0.2s linear, box-shadow 0.2s ease-in;
+	@include mx-an.reveal-up-cards();
+	@include mx-ut.round(1rem);
+	@include mx-lt.flex($justify: flex-start, $gap: 0);
+	&:hover {
+		box-shadow: v.$shadow-dark-blue-transparent;
+	}
+
+	@include mx-lt.mobile(v.$tablet) {
+		transition: none;
+		transform: none;
+		&:hover > img {
+			transition: none;
+			transform: none;
+			filter: none;
+		}
+	}
+
+	&:hover &__img {
+		filter: v.$blur-higcontrast;
+		transform: scale(1.1);
+	}
+
+	&__page-link {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		border-top-left-radius: v.$space-1rem;
+		border-top-right-radius: v.$space-1rem;
+		transform: none;
+		filter: none;
+	}
+
+	&__img {
+		border-top-left-radius: v.$space-1rem;
+		border-top-right-radius: v.$space-1rem;
+		filter: blur(0.4px) grayscale(1);
+		transition: 0.3s ease;
+		@include mx-lt.mobile(v.$tablet) {
+			transition: none;
+			filter: v.$blur-higcontrast;
+		}
+	}
+
+	&__content {
+		background-color: v.$bg-dark-blue;
+		width: 100%;
+		padding: v.$space-1rem;
+		border-bottom-left-radius: v.$space-1rem;
+		border-bottom-right-radius: v.$space-1rem;
+		@include mx-lt.flex($justify: space-around, $gap: v.$space-1-3rem);
+	}
+
+	&__information {
+		margin-bottom: v.$space-1rem;
+		@include mx-lt.flex($justify: stretch, $gap: v.$space-1-3rem);
+	}
+
+	&__title {
+		color: v.$gray;
+		font-size: v.$projects_subtitle;
+	}
+
+	&__description {
+		color: v.$white;
+		font-size: v.$parragrahp;
+	}
+
+	&__box {
+		width: 100%;
+		@include mx-lt.flex($direction: row, $justify: space-between, $gap: 0rem);
+	}
+
+	&__social {
+		@include mx-lt.flex($direction: row, $justify: flex-start, $gap: 0.5rem);
+		@include mx-lt.mobile(v.$small-mobile) {
+			flex-direction: column;
+		}
+	}
+
+	&__link {
+		color: v.$soft-white;
+		padding: 0.25rem v.$space-1rem;
+		font-family: v.$font-family-poppins-semibold;
+		transition: background-color 0.2s linear, color 0.2s linear,
+			transform 0.1s linear, box-shadow 0.2s ease;
+
+		@include mx-ut.round(1.5rem);
+		@include mx-lt.mobile(v.$tablet) {
+			font-size: 0.9em;
+		}
+
+		@include mx-lt.mobile(v.$small-mobile) {
+			font-size: 0.85em;
+		}
+
+		&:hover {
+			transform: translateY(-0.2rem);
+			box-shadow: v.$shadow-transparent;
+		}
+
+		&--youtube {
+			&:hover {
+				color: v.$white;
+				background-color: v.$soft-red;
+			}
+
+			&--disabled {
+				color: v.$gray;
+				cursor: not-allowed;
+				pointer-events: none;
+				background-color: none;
+				padding: 0;
+			}
+		}
+		&--github {
+			&:hover {
+				color: v.$white;
+				background-color: v.$bg-black;
+			}
+		}
+
+		@include mx-lt.mobile(v.$tablet) {
+			transition: none;
+			transform: none;
+			box-shadow: v.$shadow-transparent;
+			&:hover {
+				transform: none;
+				box-shadow: none;
+			}
+
+			&--youtube {
+				color: v.$white;
+				background-color: v.$soft-red;
+				&:hover {
+					color: v.$white;
+					background-color: v.$soft-red;
+				}
+
+				&--disabled {
+					color: v.$gray;
+					cursor: not-allowed;
+					pointer-events: none;
+					background-color: transparent;
+					padding: 0;
+					box-shadow: none;
+				}
+			}
+			&--github {
+				color: v.$white;
+				background-color: v.$bg-black;
+
+				&:hover {
+					color: v.$white;
+					background-color: v.$bg-black;
+				}
+			}
+		}
+	}
+
+	&__year {
+		color: v.$soft-white;
+		@include mx-lt.mobile(v.$tablet-regular) {
+			font-size: 0.8em;
+		}
+	}
+
+	&__hidden {
+		translate: 0 25rem;
+		opacity: 0;
+		display: none;
+	}
+}

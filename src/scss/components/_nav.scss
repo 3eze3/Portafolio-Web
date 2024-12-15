@@ -1,0 +1,39 @@
+@use '../abstract/mixins/mix-layout' as mx-lt;
+@use '../abstract/variables' as v;
+.nav {
+	&__list {
+		@include mx-lt.flex(
+			$direction: row,
+			$justify: space-between,
+			$gap: v.$space-2-5rem
+		);
+
+		@include mx-lt.mobile(v.$mobile) {
+			justify-content: center;
+			gap: 2rem;
+		}
+	}
+
+	&__link {
+		transition: color 0.1s ease;
+		@include mx-lt.mobile(v.$tablet) {
+			transition: none;
+			font-size: 1.25em;
+			&:hover {
+				transition: none;
+			}
+		}
+
+		@include mx-lt.mobile(v.$tablet-regular) {
+			font-size: 1.15em;
+		}
+
+		@include mx-lt.mobile(v.$mobile) {
+			font-size: 1em;
+		}
+
+		&:hover {
+			color: v.$light-purple;
+		}
+	}
+}

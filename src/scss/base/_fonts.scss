@@ -1,0 +1,58 @@
+@use "../abstract/variables" as v;
+body {
+	width: 100%;
+	min-height: 100dvh;
+	font-size: 16px;
+	font-family: v.$font-family-poppins-regular;
+	hyphens: maual;
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+a {
+	letter-spacing: 0.02em;
+	text-align: center;
+}
+
+h1,
+h2 {
+	font-family: v.$font-family-poppins-bold;
+}
+
+h1,
+h2 {
+	color: v.$soft-blue;
+}
+
+h1 {
+	font-size: v.$header;
+	filter: drop-shadow(0.15rem 0.15rem 0.4rem v.$shadow_cream);
+}
+
+h2 {
+	font-size: v.$subtitle;
+	filter: drop-shadow(0.15rem 0.15rem 0.4rem v.$shadow_dark);
+}
+
+h3 {
+	font-family: v.$font-family-poppins-semibold;
+	font-size: v.$projects_subtitle;
+}
+
+p {
+	font-size: v.$parragrahp;
+}
+.nav__link,
+select,
+option {
+	font-family: v.$font-family-poppins-semibold;
+	font-size: v.$link_nav;
+	letter-spacing: 0.04em;
+	color: v.$soft-white;
+}

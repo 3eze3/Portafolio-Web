@@ -1,0 +1,21 @@
+@mixin round($radius) {
+	& {
+		border-radius: $radius;
+	}
+}
+
+@mixin bg-linear-radient(
+	$direction,
+	$color1,
+	$grade1: 45%,
+	$color2,
+	$grade2: 100%
+) {
+	& {
+		background-image: linear-gradient(
+			to $direction,
+			$color1 0% $grade1,
+			$color2 $grade2
+		);
+	}
+}

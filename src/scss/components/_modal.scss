@@ -1,0 +1,23 @@
+@use '../abstract/mixins/mix-utils' as mx-ut;
+@use '../abstract/variables' as v;
+.modalEmail {
+	background-color: v.$shadow_cream;
+	box-shadow: v.$shadow-ligth;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 1.5rem;
+	z-index: 40;
+	translate: 0rem 20rem;
+	transition: translate 0.2s ease-in;
+	@include mx-ut.round(1.5rem);
+	&__alert {
+		font-family: v.$font-family-poppins-bold;
+		color: v.$white;
+		font-size: v.$link_filter;
+	}
+
+	&--active {
+		translate: 0rem 0rem;
+	}
+}

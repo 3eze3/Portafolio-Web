@@ -1,0 +1,22 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins/mix-layout' as mx-lt;
+
+.presentation {
+	width: 100%;
+	min-height: 100dvh;
+	position: relative;
+	@include mx-lt.flex($justify: flex-start, $gap: v.$space-5rem);
+
+	@include mx-lt.mobile(v.$destopk) {
+		gap: v.$space-2rem;
+	}
+
+	@include mx-lt.mobile(v.$tablet-regular) {
+		gap: v.$space-5rem;
+	}
+
+	@include mx-lt.mobile(v.$mobile) {
+		padding: v.$space-1rem;
+		justify-content: center;
+	}
+}

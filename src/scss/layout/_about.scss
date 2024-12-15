@@ -1,0 +1,219 @@
+@use '../abstract/mixins/mix-layout' as mx-lt;
+@use '../abstract/mixins/mix-utils' as mx-ut;
+@use '../abstract/mixins/mix-animations' as mx-an;
+@use '../abstract/variables' as v;
+.about {
+	width: 100%;
+	background-color: v.$dark-blue;
+	padding: v.$space-6rem v.$space-3rem;
+	position: relative;
+	@include mx-lt.mobile(v.$tablet) {
+		padding: v.$space-2rem v.$space-1rem;
+	}
+
+	@include mx-lt.mobile(v.$mobile) {
+		padding: v.$space-2rem 1.5rem;
+	}
+
+	&__greeting {
+		font-size: 9.5vw;
+		position: absolute;
+		letter-spacing: 0.08em;
+		left: 5rem;
+		top: 15rem;
+		transform: rotate(-15.5deg);
+		opacity: 0.15;
+		text-shadow: 0.1rem 0.1rem 0.2rem #ffffff;
+		pointer-events: none;
+
+		@include mx-lt.mobile(v.$tablet) {
+			left: 1.8rem;
+			top: 24rem;
+			transform: rotate(-20deg);
+		}
+		@include mx-lt.mobile(v.$mobile) {
+			left: -2.5rem;
+			top: 20rem;
+			font-size: 12.1vw;
+			transform: rotate(-40deg);
+		}
+	}
+
+	&__content {
+		z-index: 20;
+		position: relative;
+		@include mx-lt.flex($direction: row, $justify: space-between);
+		@include mx-lt.mobile(v.$tablet) {
+			& {
+				@include mx-lt.flex($direction: column-reverse, $justify: flex-start);
+			}
+		}
+	}
+
+	&__information {
+		width: 70%;
+		@include mx-an.reveal-up-cards($scale: 0.7, $start: 15%, $end: 35%);
+		@include mx-lt.flex($gap: v.$space-3rem);
+		@include mx-lt.mobile(v.$tablet) {
+			& {
+				width: 100%;
+			}
+		}
+	}
+
+	&__description {
+		font-size: 1.3rem;
+		color: v.$smoth-white;
+		transition: color 0.2s ease-in;
+
+		&--goal,
+		&--youtube,
+		&--kick {
+			font-family: v.$font-family-poppins-bold;
+		}
+
+		&--youtube,
+		&--kick {
+			color: v.$cream;
+		}
+
+		&--youtube {
+			&:hover {
+				color: v.$soft-red;
+			}
+		}
+		&--kick {
+			&:hover {
+				color: v.$light-green;
+			}
+		}
+
+		&--goal {
+			color: v.$light-cyan;
+			@include mx-an.reveal-up-cards($scale: 0.7, $start: 15%, $end: 35%);
+		}
+
+		@include mx-lt.mobile(v.$tablet) {
+			font-size: 1.1rem;
+		}
+
+		@include mx-lt.mobile(v.$tablet) {
+			& {
+				transition: none;
+			}
+
+			&--youtube {
+				color: v.$soft-red;
+			}
+
+			&--kick {
+				color: v.$light-green;
+			}
+		}
+	}
+
+	&__wrapper {
+		@include mx-an.reveal-up-cards($scale: 0.7, $start: 40%, $end: 50%);
+		@include mx-lt.flex();
+		@include mx-lt.mobile(v.$tablet) {
+			& {
+				width: 100%;
+				flex-direction: row;
+				justify-content: space-around;
+				gap: 0;
+			}
+		}
+		@include mx-lt.mobile(v.$mobile) {
+			gap: 2rem;
+		}
+	}
+
+	&__avatar {
+		width: v.$avatar-size-20rem;
+		filter: v.$drop-shadow-blue;
+		@include mx-lt.mobile(v.$mobile) {
+			width: 15rem;
+		}
+	}
+
+	&__img {
+		@include mx-ut.round(50%);
+	}
+
+	&__social {
+		width: 100%;
+		padding-inline: v.$space-1rem;
+		@include mx-lt.flex($direction: row, $justify: space-between, $gap: 1rem);
+		@include mx-lt.mobile(v.$tablet) {
+			& {
+				width: fit-content;
+				padding-inline: 0rem;
+				@include mx-lt.flex();
+			}
+		}
+	}
+
+	&__link {
+		color: v.$white;
+		padding: 0.4rem v.$space-1rem;
+		font-family: v.$font-family-poppins-bold;
+		transition: background-color 0.2s linear, color 0.2s linear,
+			transform 0.1s linear, box-shadow 0.2s ease;
+
+		@include mx-ut.round(1rem);
+
+		&:hover {
+			transform: translateY(-0.2rem);
+		}
+
+		&--youtube {
+			&:hover {
+				box-shadow: v.$shadow-dark-red;
+				background-color: v.$soft-red;
+			}
+		}
+
+		&--instagram {
+			&:hover {
+				box-shadow: v.$shadow-dark-gray;
+				background-color: v.$white;
+				color: v.$pink;
+			}
+		}
+
+		&--kick {
+			&:hover {
+				box-shadow: v.$shadow-dark-green;
+				background-color: v.$dark-brow;
+				color: v.$light-green;
+			}
+		}
+
+		@include mx-lt.mobile(v.$tablet) {
+			font-size: 0.9em;
+			transform: none;
+			&:hover {
+				transform: none;
+			}
+			&--youtube {
+				box-shadow: v.$shadow-dark-red;
+				background-color: v.$soft-red;
+			}
+			&--instagram {
+				box-shadow: v.$shadow-dark-gray;
+				background-color: v.$white;
+				color: v.$pink;
+			}
+			&--kick {
+				box-shadow: v.$shadow-dark-green;
+				background-color: v.$dark-brow;
+				color: v.$light-green;
+			}
+		}
+
+		@include mx-lt.mobile(v.$mobile) {
+			font-size: 0.8em;
+			padding: 0.5rem 0.7rem;
+		}
+	}
+}

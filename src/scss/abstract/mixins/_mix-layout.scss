@@ -1,0 +1,42 @@
+@mixin mobile($query) {
+	& {
+		@media (width <= $query) {
+			@content;
+		}
+	}
+}
+
+@mixin position-header($position: sticky, $top: 0, $left: 0) {
+	& {
+		position: $position;
+		top: $top;
+		left: $left;
+		z-index: 30;
+	}
+}
+
+@mixin flex($aling: center, $justify: center, $direction: column, $gap: 2rem) {
+	& {
+		display: flex;
+		flex-direction: $direction;
+		align-items: $aling;
+		justify-content: $justify;
+		gap: $gap;
+	}
+}
+
+@mixin grid($columns, $gap) {
+	& {
+		display: grid;
+		grid-template-columns: repeat($columns, 1fr);
+		gap: $gap;
+	}
+}
+
+@mixin grid-responsive($min: 21rem, $gap: 2rem) {
+	& {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+		gap: $gap;
+	}
+}

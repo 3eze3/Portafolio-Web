@@ -1,0 +1,48 @@
+@use '../abstract/mixins/mix-layout' as mx-lt;
+@use '../abstract/mixins/mix-utils' as mx-ut;
+@use '../abstract/variables' as v;
+.footer {
+	width: 100%;
+	padding: v.$space-3-5rem v.$space-3rem;
+	@include mx-ut.bg-linear-radient(bottom, #000406, 45%, #041623, 100%);
+	@include mx-lt.mobile(v.$tablet) {
+		padding: v.$space-5rem v.$space-1rem;
+	}
+
+	@include mx-lt.mobile(v.$mobile) {
+		// padding: v.$space-2rem 1.5rem;
+		padding-inline: 1.5rem;
+		padding-bottom: 4rem;
+	}
+
+	&__wrapper {
+		@include mx-lt.flex($justify: flex-start, $gap: v.$space-1rem);
+	}
+
+	&__name {
+		font-size: 2em;
+		letter-spacing: 0.05em;
+	}
+
+	&__container {
+		padding: v.$space-1rem;
+		@include mx-lt.flex(
+			$direction: row,
+			$justify: space-between,
+			$gap: v.$space-3rem
+		);
+	}
+
+	&__link {
+		transition: translate 0.2s ease;
+		filter: brightness(45%);
+		&:hover {
+			translate: 0 -0.2rem;
+			filter: brightness(100%);
+		}
+	}
+
+	&__icon {
+		width: v.$icon-size-2-5rem;
+	}
+}
