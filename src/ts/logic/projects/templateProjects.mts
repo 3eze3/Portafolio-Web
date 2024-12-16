@@ -8,7 +8,9 @@ type Projects = {
 
 async function getProjects(): Promise<Projects[] | undefined> {
 	try {
-		const response = await fetch('/projects/projects.json')
+		const response = await fetch(
+			'https://raw.githubusercontent.com/3eze3/Portafolio-Web/main/public/projects/projects.json'
+		)
 		if (!response.ok) {
 			throw new Error('Error al cargar los projectos')
 		}

@@ -1,6 +1,6 @@
 async function loadLanguage(selectedLanguage) {
     try {
-        const ENTRY_POINT_DATA_LANGUAGE = `/public/languaje/${selectedLanguage}.json`;
+        const ENTRY_POINT_DATA_LANGUAGE = `https://raw.githubusercontent.com/3eze3/Portafolio-Web/main/public/languaje/${selectedLanguage}.json`;
         const response = await fetch(`${ENTRY_POINT_DATA_LANGUAGE}`);
         const language = await response.json();
         updateContent(language);
