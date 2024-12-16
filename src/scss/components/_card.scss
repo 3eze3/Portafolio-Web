@@ -79,7 +79,7 @@
 		@include mx-lt.flex($direction: row, $justify: space-between, $gap: 0rem);
 	}
 
-	&__card__process {
+	&__process {
 		@include mx-lt.flex($direction: row, $justify: flex-start, $gap: 0.5rem);
 		@include mx-lt.mobile(v.$small-mobile) {
 			flex-direction: column;
