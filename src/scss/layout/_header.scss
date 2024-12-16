@@ -6,12 +6,13 @@
 	height: fit-content;
 	padding-block: v.$space-1-3rem;
 	@include mx-lt.flex($direction: row, $gap: v.$space-3-5rem);
+	@include mx-an.scroll-animation-blur-header();
+	@include mx-lt.position-header();
+
 	@include mx-lt.mobile(v.$mobile) {
 		gap: v.$space-2rem;
 		@include mx-lt.position-header(fixed, $top: calc(100dvh - 65.21px));
 	}
-	@include mx-lt.position-header();
-	@include mx-an.scroll-animation-blur-header();
 
 	&__actions {
 		@include mx-lt.flex($direction: row, $gap: v.$space-1-3rem);
