@@ -1,5 +1,5 @@
-@use '../abstract/mixins/mix-layout' as mx-lt;
 @use '../abstract/mixins/mix-animations' as mx-an;
+@use '../abstract/mixins/mix-layout' as mx-lt;
 @use '../abstract/mixins/mix-utils' as mx-ut;
 @use '../abstract/variables' as v;
 .card {
@@ -9,6 +9,7 @@
 	@include mx-an.reveal-up-cards();
 	@include mx-ut.round(1rem);
 	@include mx-lt.flex($justify: flex-start, $gap: 0);
+
 	&:hover {
 		box-shadow: v.$shadow-dark-blue-transparent;
 	}

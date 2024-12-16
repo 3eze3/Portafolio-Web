@@ -37,8 +37,8 @@
 		height: 100%;
 		@include mx-lt.flex($justify: flex-start, $gap: v.$space-3rem);
 		@include mx-lt.mobile(v.$destopk) {
-			@include mx-lt.flex($justify: flex-start, $gap: v.$space-5rem);
 			width: 100%;
+			@include mx-lt.flex($justify: flex-start, $gap: v.$space-5rem);
 		}
 	}
 
