@@ -11,15 +11,11 @@ const resetStyle = (card: HTMLElement) => {
 }
 
 export function tiltEfect() {
-	document.addEventListener("DOMContentLoaded", () => {
-		setTimeout(() => {
-			const $cards = document.querySelectorAll(
-				".card"
-			) as NodeListOf<HTMLElement>
-			$cards.forEach((card) => {
-				card.addEventListener("mousemove", (e) => handleMove(card, e))
-				card.addEventListener("mouseleave", () => resetStyle(card))
-			})
-		}, 500)
+	document.addEventListener('DOMContentLoaded', () => {
+		const $cards = document.querySelectorAll('.card') as NodeListOf<HTMLElement>
+		$cards.forEach((card) => {
+			card.addEventListener('mousemove', (e) => handleMove(card, e))
+			card.addEventListener('mouseleave', () => resetStyle(card))
+		})
 	})
 }

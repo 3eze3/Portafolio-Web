@@ -1,4 +1,4 @@
-@use "../abstract/variables" as v;
+@use '../abstract/variables' as v;
 body {
 	width: 100%;
 	min-height: 100dvh;
@@ -8,6 +8,7 @@ body {
 	font-smooth: always;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background-color: #000;
 }
 
 h1,

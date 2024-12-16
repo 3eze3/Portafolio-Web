@@ -9,13 +9,11 @@ const resetStyle = (card) => {
     card.style.transform = `rotateX(0deg) rotateY(0deg)`;
 };
 export function tiltEfect() {
-    document.addEventListener("DOMContentLoaded", () => {
-        setTimeout(() => {
-            const $cards = document.querySelectorAll(".card");
-            $cards.forEach((card) => {
-                card.addEventListener("mousemove", (e) => handleMove(card, e));
-                card.addEventListener("mouseleave", () => resetStyle(card));
-            });
-        }, 500);
+    document.addEventListener('DOMContentLoaded', () => {
+        const $cards = document.querySelectorAll('.card');
+        $cards.forEach((card) => {
+            card.addEventListener('mousemove', (e) => handleMove(card, e));
+            card.addEventListener('mouseleave', () => resetStyle(card));
+        });
     });
 }

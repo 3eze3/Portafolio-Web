@@ -129,20 +129,10 @@
 				<nav class="header__nav nav">
 					<ul class="nav__list">
 						<li class="nav__item">
-							<a
-								class="nav__link"
-								href="#proyectos"
-								data-section="presentation"
-								data-value="projects-link">
-							</a>
+							<a class="nav__link" href="#proyectos"> Projectos </a>
 						</li>
 						<li class="nav__item">
-							<a
-								class="nav__link"
-								href="#hola"
-								data-section="presentation"
-								data-value="hi-link">
-							</a>
+							<a class="nav__link" href="#hola"> Hola </a>
 						</li>
 					</ul>
 				</nav>
@@ -158,14 +148,14 @@
 							src="./assest/images/icons/Social/youtube.svg"
 							alt="Icono de mi canal de youtube" />
 					</a>
-					<select
+					<!-- <select
 						class="header__language"
 						aria-label="Cambiar idioma de visualización">
 						<option class="header__language-option" value="es-la">
 							Español
 						</option>
 						<option class="header__language-option" value="en">English</option>
-					</select>
+					</select> -->
 				</div>
 			</header>
 			<div class="presentation__hero hero">
@@ -179,13 +169,16 @@
 						<h1
 							class="hero__name"
 							data-section="presentation"
-							data-value="name"></h1>
+							data-value="name">
+							Hola, soy Ezequiel
+						</h1>
 						<h2
 							class="hero__profesion"
-							data-section="presentation"
-							data-value="role"
 							aria-label="Frontend Developer y Creador de contenido">
-							<span class="hero__profession hero__profesion--youtube"> </span>
+							Desarrollador Frontend y
+							<span class="hero__profession hero__profesion--youtube">
+								Creador de contenido</span
+							>
 						</h2>
 					</section>
 
@@ -356,9 +349,7 @@
 		</section>
 
 		<main class="projects" id="proyectos">
-			<h2 class="projects__title" data-section="projects" data-value="title">
-				Projectos
-			</h2>
+			<h2 class="projects__title">Projectos</h2>
 			<div class="projects__box">
 				<section class="projects__wrapper">
 					<form class="projects__filter filter">
@@ -427,92 +418,199 @@
 							<label class="filter__label" for="react"> React </label>
 						</div>
 					</form>
-					<section class="projects__container-proyects"></section>
+
+					<section class="projects__container-proyects">
+						<article
+							class="projects__card card projects-principal"
+							data-technologies="html,css,scss">
+							<a
+								class="card__page-link"
+								target="_blank"
+								href="https://blog-recip-card.netlify.app/">
+								<img
+									loading="lazy"
+									class="card__img"
+									src="./assest/images/ilustration/projects/Page-recipe.jpg"
+									alt="Ilustracion del proyecto" />
+							</a>
+							<section class="card__content">
+								<div class="card__information">
+									<h3 class="card__title">Paginas de Recetas</h3>
+								</div>
+								<div class="card__box">
+									<div class="card__social">
+										<a
+											aria-label="Video de Youtube del desarrollo del projecto"
+											class="card__link card__link--youtube card__link--youtube--disabled"
+											href="">
+											YT proximamente
+										</a>
+										<a
+											aria-label="Codigo del projecto"
+											class="card__link card__link--github"
+											href="https://github.com/3eze3/Page-Recipe">
+											Github
+										</a>
+									</div>
+									<time class="card__year" datetime="2024-10-02">
+										2024-10-02
+									</time>
+								</div>
+							</section>
+						</article>
+
+						<article
+							class="projects__card card projects-principal"
+							data-technologies="html,css,scss,ts">
+							<a
+								class="card__page-link"
+								target="_blank"
+								href="https://faq-accodion-card.netlify.app/">
+								<img
+									loading="lazy"
+									class="card__img"
+									src="./assest/images/ilustration/projects/Faq-accodion.jpg"
+									alt="Ilustracion del proyecto" />
+							</a>
+							<section class="card__content">
+								<div class="card__information">
+									<h3 class="card__title">FAQ Acordeón</h3>
+								</div>
+								<div class="card__box">
+									<div class="card__social">
+										<a
+											aria-label="Video de Youtube del desarrollo del projecto"
+											class="card__link card__link--youtube card__link--youtube--disabled"
+											href="#">
+											YT proximamente
+										</a>
+										<a
+											aria-label="Codigo del projecto"
+											class="card__link card__link--github"
+											href="https://github.com/3eze3/Faq-accordion-main">
+											Github
+										</a>
+									</div>
+									<time class="card__year" datetime="2024-10-08">
+										2024-10-08
+									</time>
+								</div>
+							</section>
+						</article>
+
+						<article
+							class="projects__card card projects-principal"
+							data-technologies="html,css,scss,js">
+							<a
+								class="card__page-link"
+								target="_blank"
+								href="https://fascinating-gumption-4e8224.netlify.app">
+								<img
+									loading="lazy"
+									class="card__img"
+									src="./assest/images/ilustration/projects/Intrative-rating.jpg"
+									alt="Ilustracion del proyecto" />
+							</a>
+							<section class="card__content">
+								<div class="card__information">
+									<h3 class="card__title">Tarjeta interactiva</h3>
+								</div>
+								<div class="card__box">
+									<div class="card__social">
+										<a
+											aria-label="Video de Youtube del desarrollo del projecto"
+											class="card__link card__link--youtube card__link--youtube--disabled"
+											href="">
+											YT proximamente
+										</a>
+										<a
+											aria-label="Codigo del projecto"
+											class="card__link card__link--github"
+											href="https://github.com/3eze3/Interactive-Rating">
+											Github
+										</a>
+									</div>
+									<time class="card__year" datetime="2023-12-18">
+										2023-12-18
+									</time>
+								</div>
+							</section>
+						</article>
+
+						<article
+							class="projects__card card projects-principal"
+							data-technologies="html,css,scss,ts">
+							<a
+								class="card__page-link"
+								target="_blank"
+								href="https://date-calculator-ez.netlify.app/">
+								<img
+									loading="lazy"
+									class="card__img"
+									src="./assest/images/ilustration/projects/age-calulator.jpg"
+									alt="Ilustracion del proyecto" />
+							</a>
+							<section class="card__content">
+								<div class="card__information">
+									<h3 class="card__title">Calculadora de fechas</h3>
+								</div>
+								<div class="card__box">
+									<div class="card__social">
+										<a
+											aria-label="Video de Youtube del desarrollo del projecto"
+											class="card__link card__link--youtube card__link--youtube--disabled"
+											href="">
+											YT proximamente
+										</a>
+										<a
+											aria-label="Codigo del projecto"
+											class="card__link card__link--github"
+											href="https://github.com/3eze3/Age-Calculator">
+											Github
+										</a>
+									</div>
+									<time class="card__year" datetime="2024-10-02">
+										2024-10-02
+									</time>
+								</div>
+							</section>
+						</article>
+					</section>
 				</section>
 
 				<section class="projects__live live">
-					<div class="live__wrapper">
-						<button class="live__btn live__btn-prev" aria-label="previus tools">
-							<img
-								loading="lazy"
-								class="live__arrow live__arrow-left"
-								src="./assest/images/icons/general/left_arrow_icon.svg"
-								alt="Left arrow for the next projecto" />
-						</button>
-
-						<section class="live__container">
-							<article class="live__card card">
-								<a
-									class="card__page-link"
-									target="_blank"
-									href="https://www.youtube.com/watch?v=G97g2YpyZAg">
-									<img
-										loading="lazy"
-										class="card__img live__img"
-										src="./assest/images/ilustration/about/scriptnodejs.png"
-										alt="Ilustracion del projecto" />
-								</a>
-								<section class="card__content">
-									<h3 class="card__title">Script Node JS</h3>
-									<div class="card__box">
-										<a
-											aria-label="Video de Youtube del desarrollo del projecto"
-											class="card__link card__link--youtube"
-											target="_blank"
-											href="https://www.youtube.com/watch?v=G97g2YpyZAg">
-											YT video
-										</a>
-										<a
-											class="card__link card__link--github"
-											target="_blank"
-											href="https://github.com/3eze3/scripting-structure-work">
-											Github
-										</a>
-									</div>
-								</section>
-							</article>
-
-							<article class="live__card card">
-								<a
-									class="card__page-link"
-									target="_blank"
-									href="https://www.youtube.com/watch?v=G97g2YpyZAg">
-									<img
-										loading="lazy"
-										class="card__img live__img"
-										src="./assest/images/ilustration/about/scriptnodejs.png"
-										alt="Ilustracion del projecto" />
-								</a>
-								<section class="card__content">
-									<h3 class="card__title">Script node js</h3>
-									<div class="card__box">
-										<a
-											aria-label="Video de Youtube del desarrollo del projecto"
-											class="card__link card__link--youtube"
-											target="_blank"
-											href="https://www.youtube.com/watch?v=G97g2YpyZAg">
-											YT video
-										</a>
-										<a
-											class="card__link card__link--github"
-											target="_blank"
-											href="https://github.com/3eze3/scripting-structure-work">
-											Github
-										</a>
-									</div>
-								</section>
-							</article>
-						</section>
-						<button
-							class="live__btn live__btn-next"
-							aria-label="Right arrow for the next projecto">
-							<img
-								loading="lazy"
-								class="live__arrow live__arrow-left"
-								src="./assest/images/icons/general/right_arrow_icon.svg"
-								alt="Right arrow for the next projecto" />
-						</button>
-					</div>
+					<section class="live__container">
+						<article class="live__card card">
+							<a
+								class="card__page-link"
+								target="_blank"
+								href="https://www.youtube.com/watch?v=G97g2YpyZAg">
+								<img
+									loading="lazy"
+									class="card__img live__img"
+									src="./assest/images/ilustration/about/scriptnodejs.png"
+									alt="Ilustracion del projecto" />
+							</a>
+							<section class="card__content">
+								<h3 class="card__title">Script Node JS</h3>
+								<div class="card__box">
+									<a
+										aria-label="Video de Youtube del desarrollo del projecto"
+										class="card__link card__link--youtube"
+										target="_blank"
+										href="https://www.youtube.com/watch?v=G97g2YpyZAg">
+										YT video
+									</a>
+									<a
+										class="card__link card__link--github"
+										target="_blank"
+										href="https://github.com/3eze3/scripting-structure-work">
+										Github
+									</a>
+								</div>
+							</section>
+						</article>
+					</section>
 					<a
 						href="https://kick.com/EzequielTech"
 						class="live__link"
@@ -530,32 +628,38 @@
 		</main>
 
 		<section class="about" id="hola">
+			<!-- "description": "Copiado en el ClipBoard!" -->
 			<h2
 				class="about__greeting"
 				aria-label="Hola"
 				data-section="about"
-				data-value="greeting"></h2>
+				data-value="greeting">
+				HOLAAAAAAAA!
+			</h2>
 			<section class="about__content">
-				<!--  -->
 				<div class="about__information">
-					<p
-						class="about__description"
-						data-section="about"
-						data-value="description">
+					<p class="about__description">
+						Desarrollador frontend enfocado en crear aplicaciones web con una
+						experiencia de usuario excepcional y un diseño limpio. Comparto mi
+						proceso de desarrollo y herramientas en mi canal de
 						<a
 							class="about__description about__description--youtube"
 							target="_blank"
-							href="https://youtube.com/@eze-coder"></a>
+							href="https://youtube.com/@eze-coder">
+							YouTube
+						</a>
+						y directos en
 						<a
 							class="about__description about__description--kick"
 							target="_blank"
 							href="https://kick.com/EzequielTech">
+							Kick
 						</a>
 					</p>
-					<p
-						class="about__description about__description--goal"
-						data-section="about"
-						data-value="goal"></p>
+					<p class="about__description about__description--goal">
+						Mi objetivo es seguir creciendo profesionalmente y aportar
+						innovación y calidad a equipos que valoren estos principios.
+					</p>
 				</div>
 				<div class="about__wrapper">
 					<div class="about__avatar">

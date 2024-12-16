@@ -11,8 +11,12 @@
 		gap: v.$space-2rem;
 	}
 
+	@include mx-lt.mobile(v.$tablet) {
+		gap: 15rem;
+	}
+
 	@include mx-lt.mobile(v.$tablet-regular) {
-		gap: v.$space-5rem;
+		gap: 10rem;
 	}
 
 	@include mx-lt.mobile(v.$mobile) {

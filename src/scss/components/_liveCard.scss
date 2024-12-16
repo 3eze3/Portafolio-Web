@@ -5,79 +5,25 @@
 	@include mx-lt.flex();
 
 	@include mx-lt.mobile(v.$destopk) {
-		padding-inline: 3rem;
-		width: 100%;
+		width: 75%;
 	}
 
-	@include mx-lt.mobile(v.$tablet-regular) {
-		padding-inline: 4rem;
+	@include mx-lt.mobile(v.$tablet) {
+		width: 80%;
 	}
 
 	@include mx-lt.mobile(v.$mobile) {
 		width: 100%;
-		padding-inline: 0rem;
-	}
-
-	&__wrapper {
-		position: relative;
-		overflow: hidden;
-		@include mx-lt.flex($direction: row, $justify: space-between, $gap: 0.5rem);
-	}
-
-	&__img {
-		transition: object-position 0.8s ease, transform 0.8s ease;
 	}
 
 	&__container {
-		height: 23rem;
-		display: grid;
-		grid-template-columns: repeat(2, 100%);
-		transition: transform 0.3s ease;
 		&:hover .live__img {
-			object-position: 1rem 0.5rem;
+			object-position: 2.4rem 1rem;
+			transform: scale(1.2);
 		}
 	}
-
-	&__btn {
-		cursor: pointer;
-		position: absolute;
-		z-index: 10;
-		width: 2.4rem;
-		padding: 0.4rem;
-		top: 16.5rem;
-		transition: background-color 0.4s ease;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		&-prev {
-			left: 2.5rem;
-		}
-
-		&-next {
-			right: 2.5rem;
-		}
-
-		&:disabled {
-			cursor: not-allowed;
-			opacity: 0.5;
-		}
-
-		&:hover {
-			background-color: rgba(4, 51, 74, 0.279);
-		}
-	}
-
-	&__arrow {
-		filter: v.$invert-light;
-		@include mx-lt.mobile(v.$tablet) {
-			width: 1.65rem;
-		}
-
-		@include mx-lt.mobile(v.$mobile) {
-			width: 1rem;
-		}
+	&__img {
+		transition: object-position 0.3s ease, transform 0.3s ease;
 	}
 
 	&__link {

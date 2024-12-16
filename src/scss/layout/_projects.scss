@@ -13,7 +13,7 @@
 	}
 
 	@include mx-lt.mobile(v.$mobile) {
-		padding-inline: 1.5rem;
+		padding-inline: 1rem;
 	}
 
 	&__box {
@@ -34,19 +34,21 @@
 
 	&__wrapper {
 		width: 65%;
-		min-height: 100dvh;
+		height: 100%;
 		@include mx-lt.flex($justify: flex-start, $gap: v.$space-3rem);
 		@include mx-lt.mobile(v.$destopk) {
+			@include mx-lt.flex($justify: flex-start, $gap: v.$space-5rem);
 			width: 100%;
-			@include mx-lt.flex($justify: flex-start, $gap: v.$space-3rem);
 		}
 	}
 
 	&__container-proyects {
 		@include mx-lt.grid-responsive();
+
 		@include mx-lt.mobile(v.$tablet) {
 			@include mx-lt.grid-responsive(v.$min-grid);
 		}
+
 		@include mx-lt.mobile(v.$mobile) {
 			@include mx-lt.grid-responsive(23rem);
 		}
